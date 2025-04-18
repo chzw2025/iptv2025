@@ -1,6 +1,10 @@
 #EXTM3U
+#EXTINF:-1 tvg-id="AndoTV.cn",Ando TV
+http://stream.qhbtv.com/adws/sd/live.m3u8
 #EXTINF:-1 tvg-id="AndoTV.cn",Ando TV (576p)
 http://119.1.122.186:4022/rtp/238.255.2.189:5999
+#EXTINF:-1 tvg-id="AnimationShowChannel.cn",Animation Show Channel
+http://180.213.174.225:9901/tsfile/live/1034_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="",Beijing Traffic Radio TV [Geo-blocked]
 http://123.56.24.28:1935/live/fm1039/96K/tzwj_video.m3u8
 #EXTINF:-1 tvg-id="",Beijing Youth Radio [Geo-blocked]
@@ -12,6 +16,8 @@ https://video.bread-tv.com:8091/hls-live24/online/index.m3u8
 #EXTINF:-1 tvg-id="BRTVKakuChildrensChannel.cn",BRTV Kaku Childrens Channel
 http://49.113.179.174:4022/udp/238.125.2.216:5140
 #EXTINF:-1 tvg-id="BRTVKakuChildrensChannel.cn",BRTV Kaku Childrens Channel
+http://223.72.123.28:85/tsfile/live/1026_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="BRTVKakuChildrensChannel.cn",BRTV Kaku Childrens Channel
 http://223.111.191.105/downflv.brtvcloud.com/kkkkasd/winfr.m3u8
 #EXTINF:-1 tvg-id="BRTVScienceEducationChannel.cn",BRTV Science & Education Channel
 http://49.113.179.174:4022/udp/238.125.3.121:5140
@@ -19,46 +25,10 @@ http://49.113.179.174:4022/udp/238.125.3.121:5140
 http://gslbservzqhsw.itv.cmvideo.cn/index.m3u8?Contentid=reallive-hdcctv1&channel-id=ystenlive&livemode=1&stbId=3
 #EXTINF:-1 tvg-id="CCTV1.cn",CCTV1 (576p)
 http://117.161.133.51:81/gitv_live/G_CCTV-1/G_CCTV-1.m3u8
-#EXTINF:-1 tvg-id="CCTV2.cn",CCTV2 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.102:10250
 #EXTINF:-1 tvg-id="CCTV2.cn",CCTV2 (576p)
 http://117.161.133.51:81/gitv_live/G_CCTV-2/G_CCTV-2.m3u8
-#EXTINF:-1 tvg-id="CCTV3.cn",CCTV3 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.122:10370
-#EXTINF:-1 tvg-id="",CCTV4 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.138:10466
-#EXTINF:-1 tvg-id="CCTV5.cn",CCTV5 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.123:10376
-#EXTINF:-1 tvg-id="CCTV5Plus.cn",CCTV5+ (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.254.96.234:9484
-#EXTINF:-1 tvg-id="CCTV6.cn",CCTV6 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.124:10382
-#EXTINF:-1 tvg-id="CCTV7.cn",CCTV7 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.103:10256
-#EXTINF:-1 tvg-id="CCTV8.cn",CCTV8 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.125:10388
-#EXTINF:-1 tvg-id="CCTV9.cn",CCTV9 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.104:10262
-#EXTINF:-1 tvg-id="CCTV10.cn",CCTV10 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.105:10268
-#EXTINF:-1 tvg-id="CCTV11.cn",CCTV11 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.154:10560
-#EXTINF:-1 tvg-id="CCTV12.cn",CCTV12 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.106:10274
-#EXTINF:-1 tvg-id="CCTV13.cn",CCTV13 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.254.96.161:9040
-#EXTINF:-1 tvg-id="CCTV14.cn",CCTV14 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.107:10280
-#EXTINF:-1 tvg-id="CCTV15.cn",CCTV15 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.155:10566
 #EXTINF:-1 tvg-id="CCTV15.cn",CCTV15音乐
 http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225641/index.m3u8
-#EXTINF:-1 tvg-id="CCTV16.cn",CCTV16 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.247:11124
-#EXTINF:-1 tvg-id="",CCTV16-4K (2160p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.249:11136
-#EXTINF:-1 tvg-id="CCTV17.cn",CCTV17 (1080p)
-http://bl.dchwtq.asia:10000/rtp/239.69.1.152:10548
 #EXTINF:-1 tvg-id="",CCTV TV Guide (576p)
 http://117.161.133.51:81/gitv_live/G_DIANSHIZN-CQ/G_DIANSHIZN-CQ.m3u8?p=GITV
 #EXTINF:-1 tvg-id="CCTVWorldGeography.cn",CCTV 世界地理
@@ -89,14 +59,32 @@ http://117.161.133.51:81/gitv_live/G_CETV-2/G_CETV-2.m3u8?p=GITV
 http://121.19.134.246:808/hls/62/index.m3u8
 #EXTINF:-1 tvg-id="CETV4.cn",CETV-4
 http://49.113.179.174:4022/udp/238.125.3.92:5140
+#EXTINF:-1 tvg-id="CGTN.cn",CGTN (1080p)
+https://amg00405-rakutentv-cgtn-rakuten-i9tar.amagi.tv/master.m3u8
+#EXTINF:-1 tvg-id="CGTNDocumentary.cn",CGTN Documentary (1080p)
+https://amg00405-rakutentv-cgtndocumentary-rakuten-0ql8j.amagi.tv/master.m3u8
 #EXTINF:-1 tvg-id="ChannelLaw.cn",Channel Law
 http://49.113.179.174:4022/udp/238.125.2.201:5140
+#EXTINF:-1 tvg-id="ChannelMax.cn",Channel Max
+http://180.213.174.225:9901/tsfile/live/1037_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="ChannelTea.cn",Channel Tea
+http://180.213.174.225:9901/tsfile/live/1041_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="CHCAction.cn",CHC Action
+http://180.213.174.225:9901/tsfile/live/1027_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="CHCHomeTheater.cn",CHC Home Theater
+http://180.213.174.225:9901/tsfile/live/1030_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="CityTheaterChannel.cn",City Theater Channel
 http://49.113.179.174:4022/udp/238.125.1.60:5140
 #EXTINF:-1 tvg-id="CNCWorldEnglish.cn",CNC中文 (720p) [Not 24/7]
 http://source07.v.news.cn/live/CNC_CN/playlist.m3u8
 #EXTINF:-1 tvg-id="DocumentaryHumanitiesChannel.cn",Documentary Humanities Channel
 http://49.113.179.174:4022/udp/238.125.3.135:5140
+#EXTINF:-1 tvg-id="DOXSurround.cn",DOX Surround
+http://180.213.174.225:9901/tsfile/live/1032_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="DOXYaqu.cn",DOX Yaqu
+http://180.213.174.225:9901/tsfile/live/1033_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="DOXYijia.cn",DOX Yijia
+http://180.213.174.225:9901/tsfile/live/1031_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="DragonTVInternational.cn",Dragon TV International (360p)
 http://210.210.155.37/x6bnqe/s/s29/index.m3u8
 #EXTINF:-1 tvg-id="EcologyEnvironmentTV.cn",Ecology & Environment TV
@@ -119,6 +107,8 @@ http://dslive.grtn.cn/fszh/sd/live.m3u8
 http://stream8.jlntv.cn/fs/sd/live.m3u8
 #EXTINF:-1 tvg-id="GameChannel.cn",Game Channel
 http://49.113.179.174:4022/udp/238.125.1.36:5140
+#EXTINF:-1 tvg-id="HunanEntertainmentChannel.cn",Hunan Entertainment Channel
+http://1732e975z9.zicp.fun:8082/hls/20/index.m3u8
 #EXTINF:-1 tvg-id="HunanPingYu.cn",Hunan Ping Yu
 http://49.113.179.174:4022/udp/238.125.5.102:5140
 #EXTINF:-1 tvg-id="JiaJiaCartoon.cn",JiaJia Cartoon
@@ -130,7 +120,13 @@ http://49.113.179.174:4022/udp/238.125.2.159:5140
 #EXTINF:-1 tvg-id="LiangshanTV.cn",Liangshan TV [Not 24/7]
 http://118.122.2.29:9999/hls/47/index.m3u8
 #EXTINF:-1 tvg-id="NeiMonggolTV.cn",Nei Monggol TV
+http://1.183.141.194:8001/hls/55/index.m3u8
+#EXTINF:-1 tvg-id="NeiMonggolTV.cn",Nei Monggol TV
 http://49.113.179.174:4022/udp/238.125.7.93:5140
+#EXTINF:-1 tvg-id="NeiMonggolTV.cn",Nei Monggol TV
+http://110.19.156.172:9901/tsfile/live/1003_1.m3u8
+#EXTINF:-1 tvg-id="NeiMonggolTV2MongolianCultureChannel.cn",Nei Monggol TV 2 Mongolian Culture Channel
+http://1.183.141.194:8001/hls/54/index.m3u8
 #EXTINF:-1 tvg-id="QTV1.cn",QTV-1
 http://video10.qtv.com.cn/drm/qtv1at/manifest.m3u8
 #EXTINF:-1 tvg-id="QTV2.cn",QTV-2
@@ -153,6 +149,10 @@ http://223.166.234.114:7777/tsfile/live/1033_1.m3u8
 http://49.113.179.174:4022/udp/238.125.2.172:5140
 #EXTINF:-1 tvg-id="SMGFootballChannel.cn",SMG Football Channel
 http://49.113.179.174:4022/udp/238.125.2.142:5140
+#EXTINF:-1 tvg-id="STVCity.cn",STV City
+http://61.173.144.157:9901/tsfile/live/1001_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="STVNewsandGeneral.cn",STV News and General
+http://61.173.144.157:9901/tsfile/live/1000_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="ToonmaxTV.cn",Toonmax TV
 http://49.113.179.174:4022/udp/238.125.4.28:5140
 #EXTINF:-1 tvg-id="UgoShopTV.cn",Ugo Shop TV
@@ -174,17 +174,33 @@ http://222.80.13.33:4022/udp/238.125.3.175:5140
 #EXTINF:-1 tvg-id="XinjiangTV3.cn",Xinjiang TV 3
 http://49.113.179.174:4022/udp/238.125.7.147:5140
 #EXTINF:-1 tvg-id="XinjiangTV3.cn",Xinjiang TV 3
+http://120.70.60.179:9901/tsfile/live/1006_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="XinjiangTV3.cn",Xinjiang TV 3
 https://st-video.xjmty.com/fs/livedit/e55abfa37af26e19/8ce9971c2177b3dd.m3u8
 #EXTINF:-1 tvg-id="XinjiangTV5.cn",Xinjiang TV 5
 http://49.113.179.174:4022/udp/238.125.7.149:5140
+#EXTINF:-1 tvg-id="XinjiangTV5.cn",Xinjiang TV 5
+http://106.124.91.222:85/tsfile/live/21216_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="XinjiangTV5.cn",Xinjiang TV 5
+http://106.124.91.222:9901/tsfile/live/21216_1.m3u8?authid=0&key=txiptv&playlive=0
 #EXTINF:-1 tvg-id="XinjiangTV8.cn",Xinjiang TV 8
 http://49.113.179.174:4022/udp/238.125.3.181:5140
+#EXTINF:-1 tvg-id="XinjiangTV8.cn",Xinjiang TV 8
+http://106.124.91.222:85/tsfile/live/21219_1.m3u8?authid=0&key=txiptv&playlive=1
+#EXTINF:-1 tvg-id="XinjiangTV8.cn",Xinjiang TV 8
+http://120.70.60.179:9901/tsfile/live/1002_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="XinjiangTV9.cn",Xinjiang TV 9
 http://49.113.179.174:4022/udp/238.125.7.153:5140
+#EXTINF:-1 tvg-id="XinjiangTV9.cn",Xinjiang TV 9
+http://106.124.91.222:85/tsfile/live/21220_1.m3u8?authid=0&key=txiptv&playlive=1
 #EXTINF:-1 tvg-id="XinjiangTV12.cn",Xinjiang TV 12
 http://49.113.179.174:4022/udp/238.125.3.185:5140
+#EXTINF:-1 tvg-id="XizangTVChinese.cn",Xizang TV Chinese
+http://php.jdshipin.com/xztv.php?id=ws
 #EXTINF:-1 tvg-id="XizangTVTibetan.cn",Xizang TV Tibetan
 http://49.113.179.174:4022/udp/238.125.3.94:5140
+#EXTINF:-1 tvg-id="XizangTVTibetan.cn",Xizang TV Tibetan
+http://php.jdshipin.com:8880/xztv.php?id=zy
 #EXTINF:-1 tvg-id="YanbianCineseComprehensiveChannel.cn",Yanbian Cinese Comprehensive Channel
 https://live.ybtvyun.com/video/s10016-6d4fe23a90b3/index.m3u8
 #EXTINF:-1 tvg-id="YanbianTV1.cn",Yanbian TV 1
@@ -1519,23 +1535,3 @@ http://yslk.chinashadt.com:1635/live/stream:di1.stream/playlist.m3u8
 http://yslk.chinashadt.com:1635/live/stream:di2.stream/playlist.m3u8
 #EXTINF:-1 tvg-id="",龙岩综合 (540p)
 http://stream.lytv.net.cn/2/sd/live.m3u8
-#EXTINF:-1 tvg-id="XinjiangTV5.cn",Xinjiang TV 5
-http://106.124.91.222:9901/tsfile/live/21216_1.m3u8?key=txiptv&playlive=0&authid=0
-#EXTINF:-1 tvg-id="STVNewsandGeneral.cn",STV News and General
-http://61.173.144.157:9901/tsfile/live/1000_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-id="STVCity.cn",STV City
-http://61.173.144.157:9901/tsfile/live/1001_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-id="NeiMonggolTV2MongolianCultureChannel.cn",Nei Monggol TV 2 Mongolian Culture Channel
-http://1.183.141.194:8001/hls/54/index.m3u8
-#EXTINF:-1 tvg-id="NeiMonggolTV.cn",Nei Monggol TV
-http://1.183.141.194:8001/hls/55/index.m3u8
-#EXTINF:-1 tvg-id="HunanEntertainmentChannel.cn",Hunan Entertainment Channel
-http://1732e975z9.zicp.fun:8082/hls/20/index.m3u8
-#EXTINF:-1 tvg-id="XinjiangTV9.cn",Xinjiang TV 9
-http://106.124.91.222:85/tsfile/live/21220_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-id="XinjiangTV8.cn",Xinjiang TV 8
-http://106.124.91.222:85/tsfile/live/21219_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-id="XinjiangTV5.cn",Xinjiang TV 5
-http://106.124.91.222:85/tsfile/live/21216_1.m3u8?key=txiptv&playlive=1&authid=0
-#EXTINF:-1 tvg-id="BRTVKakuChildrensChannel.cn",BRTV Kaku Childrens Channel
-http://223.72.123.28:85/tsfile/live/1026_1.m3u8?key=txiptv&playlive=1&authid=0

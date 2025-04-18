@@ -1,14 +1,17 @@
 type BlockedProps = {
   channel: string
+  reason: string
   ref: string
 }
 
 export class Blocked {
-  channel: string
+  channelId: string
+  reason: string
   ref: string
 
-  constructor({ ref, channel }: BlockedProps) {
-    this.channel = channel
-    this.ref = ref
+  constructor(data: BlockedProps) {
+    this.channelId = data.channel
+    this.reason = data.reason
+    this.ref = data.ref
   }
 }

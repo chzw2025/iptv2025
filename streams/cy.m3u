@@ -5,17 +5,23 @@ https://sc-kuzeykibrissmarttv.ercdn.net/adatv/bant1/playlist.m3u8
 https://dev.aftermind.xyz/edge-hls/unitrust/alfasports/index.m3u8?token=8TXWzhY3h6jrzqEqx
 #EXTINF:-1 tvg-id="AlfaSport.cy",Alfa Sport (1080p) [Not 24/7]
 https://dev.aftermind.xyz/hls/unitrust/alfasports/index.m3u8?token=8TXWzhY3h6jrzqEqx
-#EXTINF:-1 tvg-id="AlphaTVCyprus.cy",Alpha TV Cyprus (720p) [Geo-blocked]
+#EXTINF:-1 tvg-id="AlphaTVCyprus.cy" http-referrer="http://player.cloudskep.com/alphatmp/alphacy",Alpha TV Cyprus (720p) [Geo-blocked]
 #EXTVLCOPT:http-referrer=http://player.cloudskep.com/alphatmp/alphacy
 http://l4.cloudskep.com/alphatmp/acy/playlist.m3u8
 #EXTINF:-1 tvg-id="ANT1Cyprus.cy",ANT1 Cyprus (1080p)
 http://l2.cloudskep.com/ant1cm2/abr/playlist.m3u8
+#EXTINF:-1 tvg-id="BRT1.cy",BRT 1
+https://canlitvulusal.xyz/live/brt1/index.m3u8
 #EXTINF:-1 tvg-id="BRT1.cy",BRT 1 (720p) [Not 24/7]
 https://sc-kuzeykibrissmarttv.ercdn.net/brt1hd/bant1/playlist.m3u8
+#EXTINF:-1 tvg-id="BRT2.cy",BRT 2
+https://canlitvulusal.xyz/live/brt2/index.m3u8
 #EXTINF:-1 tvg-id="BRT2.cy",BRT 2 (720p)
 http://bozztv.com/gin-36bay3/gt-kibrisbrt3/index.m3u8
 #EXTINF:-1 tvg-id="BRT2.cy",BRT 2 (720p) [Not 24/7]
 https://sc-kuzeykibrissmarttv.ercdn.net/brt2hd/bant1/playlist.m3u8
+#EXTINF:-1 tvg-id="BRT3.cy",BRT 3
+http://185.234.111.229:8000/play/a07e
 #EXTINF:-1 tvg-id="CityChannel.cy",City Channel (720p) [Not 24/7]
 https://dev.aftermind.xyz/edge-hls/unitrust/citychannel/index.m3u8?token=8TXWzhY3h6jrzqEqx
 #EXTINF:-1 tvg-id="TVGunes.cy",GÜNEŞ TV (576p) [Not 24/7]
@@ -30,6 +36,10 @@ https://sc-kuzeykibrissmarttv.ercdn.net/kanalt/bantp1/playlist.m3u8
 https://sc-kuzeykibrissmarttv.ercdn.net/kibristv/bant1/playlist.m3u8
 #EXTINF:-1 tvg-id="OmegaChannel.cy",Omega Channel (1080p)
 http://l1.cloudskep.com/tst/omcy/playlist.m3u8
+#EXTINF:-1 tvg-id="OMONOIATV.cy",OMONOIA TV (684p)
+http://62.233.57.226:8001/play/a00b00
+#EXTINF:-1 tvg-id="OneChannelCyprus.cy",One Channel Cyprus (576p)
+http://62.210.211.188:2095/play/a00e
 #EXTINF:-1 tvg-id="RIK1.cy",RIK 1
 http://l6.cloudskep.com/tvb6/rik1-1/mpeg.2ts
 #EXTINF:-1 tvg-id="RIK2.cy",RIK 2

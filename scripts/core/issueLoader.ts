@@ -9,30 +9,14 @@ const CustomOctokit = Octokit.plugin(paginateRest, restEndpointMethods)
 const octokit = new CustomOctokit()
 
 export class IssueLoader {
-  async load({ labels }: { labels: string[] | string }) {
-    labels = Array.isArray(labels) ? labels.join(',') : labels
+  async load(props?: { labels: string | string[] }) {
+    let labels = ''
+    if (props && props.labels) {
+      labels = Array.isArray(props.labels) ? props.labels.join(',') : props.labels
+    }
     let issues: object[] = []
     if (TESTING) {
-      switch (labels) {
-        case 'streams:add':
-          issues = require('../../tests/__data__/input/issues/streams_add.js')
-          break
-        case 'streams:edit':
-          issues = require('../../tests/__data__/input/issues/streams_edit.js')
-          break
-        case 'broken stream':
-          issues = require('../../tests/__data__/input/issues/broken_stream.js')
-          break
-        case 'streams:add,approved':
-          issues = require('../../tests/__data__/input/issues/streams_add_approved.js')
-          break
-        case 'streams:edit,approved':
-          issues = require('../../tests/__data__/input/issues/streams_edit_approved.js')
-          break
-        case 'streams:remove,approved':
-          issues = require('../../tests/__data__/input/issues/streams_remove_approved.js')
-          break
-      }
+      issues = (await import('../../tests/__data__/input/playlist_update/issues.js')).default
     } else {
       issues = await octokit.paginate(octokit.rest.issues.listForRepo, {
         owner: OWNER,

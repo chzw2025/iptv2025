@@ -37,6 +37,8 @@ https://59d7d6f47d7fc.streamlock.net/auroraarte/auroraarte/playlist.m3u8
 https://ed05.top-ix.org/avtvlive/azzurra/streaming/playlist.m3u8
 #EXTINF:-1 tvg-id="BikeChannel.it",Bike (720p)
 http://backup.superstreaming.inaria.me/BikeSmartMobilityDTT/playlist.m3u8
+#EXTINF:-1 tvg-id="Boing.it",Boing (720p)
+https://liveturner.akamaized.net/75a4d1a90e744fa5b9901a1853d2c47f/eu-central-1/6284318116001/playlist.m3u8
 #EXTINF:-1 tvg-id="Boing.it",Boing Italy [Geo-blocked]
 https://live2.msf.cdn.mediaset.net/content/hls_h0_clr_vos/live/channel(kb)/index.m3u8
 #EXTINF:-1 tvg-id="BomChannel.it",Bom Channel
@@ -67,8 +69,6 @@ https://0ff9dd7fe9b64bc08a5fc4ed525454c3.msvdn.net/live/S42170132/sT6C3LFaD1iA/p
 https://6e94aeeb1b42461d95f973ae34be5167.msvdn.net/ac115_live/canale1.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CarinaTV.it",CarinaTV (720p)
 https://stream7.zivoli.it/carinatv/carinatv/playlist.m3u8
-#EXTINF:-1 tvg-id="Cartoonito.it",Cartoonito Italy [Geo-blocked]
-https://live2.msf.cdn.mediaset.net/content/hls_h0_clr_vos/live/channel(la)/index.m3u8
 #EXTINF:-1 tvg-id="CasaItalia53.it",Casa Italia 53 (720p)
 https://ovp-live.akamaized.net/ac115_live/canale3.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Cine34.it",Cine 34 [Geo-blocked]
@@ -133,8 +133,6 @@ https://59d7d6f47d7fc.streamlock.net/icarotv/icarotv/playlist.m3u8
 https://5f22d76e220e1.streamlock.net/inlire/inlire/playlist.m3u8
 #EXTINF:-1 tvg-id="",Insurance Connect (720p)
 https://tsw.streamingwebtv24.it:1936/insuranceconnect/insuranceconnect/playlist.m3u8
-#EXTINF:-1 tvg-id="InterTV.it",Inter TV (720p)
-https://open.http.mp.streamamg.com/p/3001560/sp/300156000/playManifest/entryId/0_xmkk2kjr/flavorIds/0_zlbr85f8,0_zlbr85f8,0_noewhew2/format/applehttp/protocol/https/a.m3u8
 #EXTINF:-1 tvg-id="Iris.it",Iris [Geo-blocked]
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(ki)/index.m3u8
 #EXTINF:-1 tvg-id="Italia1.it",Italia 1 [Geo-blocked]
@@ -251,7 +249,7 @@ https://iptv.peer.biz/live/peertv-it.m3u8
 https://iptv.peer.biz/live/peertv-en.m3u8
 #EXTINF:-1 tvg-id="PeerTVSudtirol.it",Peer TV Südtirol (1080p)
 https://iptv.peer.biz/live/peertv.m3u8
-#EXTINF:-1 tvg-id="PlutoTVTopGear.it",Pluto TV Top Gear
+#EXTINF:-1 tvg-id="PlutoTVTopGear.it" http-referrer="https://pluto.tv/it/live-tv/64c109a4798def0008a6e03e",Pluto TV Top Gear
 #EXTVLCOPT:http-referrer=https://pluto.tv/it/live-tv/64c109a4798def0008a6e03e
 https://stitcher-ipv4.pluto.tv/v1/stitch/embed/hls/channel/64c109a4798def0008a6e03e/master.m3u8?advertisingId={PSID}&appVersion=unknown&deviceDNT={TARGETOPT}&deviceId={PSID}&deviceLat=0&deviceLon=0&deviceMake=samsung&deviceModel=samsung&deviceType=samsung-tvplus&deviceVersion=unknown&embedPartner=samsung-tvplus&profileFloor=&profileLimit=&samsung_app_domain={APP_DOMAIN}&samsung_app_name={APP_NAME}&us_privacy=1YNY
 #EXTINF:-1 tvg-id="",POP Television (720p)
@@ -270,6 +268,8 @@ https://msh0203.stream.seeweb.it/live/flv:stream2.sdp/playlist.m3u8
 https://media2021.rtvweb.com/promovideo_web/promovideo/playlist.m3u8
 #EXTINF:-1 tvg-id="QuartoCanaleFlegreo.it",Quarto Canale Flegreo (720p)
 https://live.mariatvcdn.com/dialogos/171e41deedf405f10c7dd6311387fb43.sdp/playlist.m3u8
+#EXTINF:-1 tvg-id="QVC.it",QVC Italia (540p)
+https://qrg.akamaized.net/hls/live/2017383/lsqvc1it/master.m3u8
 #EXTINF:-1 tvg-id="R101TV.it",R 101 Italia IT (576p)
 https://live3-radio-mediaset-it.akamaized.net/content/hls_h0_clr_vos/live/channel(er)/index.m3u8
 #EXTINF:-1 tvg-id="Radio51TV.it",Radio 51 TV (480p) [Geo-blocked]
@@ -306,6 +306,8 @@ https://stream2.xdevel.com/video1s3-7/stream/playlist.m3u8
 https://streamcdnb1-dd782ed59e2a4e86aabf6fc508674b59.msvdn.net/live/S9346184/XEx1LqlYbNic/playlist_video.m3u8
 #EXTINF:-1 tvg-id="RadioZeta.it",RadioZeta (480p)
 https://unlimited1-cl.dps.live/radioztv/radioztv.smil/radioztv/livestream2/chunks.m3u8
+#EXTINF:-1 tvg-id="Rai1.it",Rai 1 (720p)
+https://dash2.antik.sk/live/test_rai_uno_tizen/playlist.m3u8
 #EXTINF:-1 tvg-id="Rai1.it",Rai 1 (576p) [Geo-blocked]
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803
 #EXTINF:-1 tvg-id="Rai1.it",Rai 1 (Geo) (576p)
@@ -314,6 +316,11 @@ https://mediapolisevent.rai.it/relinker/relinkerServlet.htm?cont=2606803
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718
 #EXTINF:-1 tvg-id="Rai2.it",Rai 2 (302p) [Geo-blocked]
 http://stream.tvtap.net:8081/live/it-rai2.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="Rai2HD.it" http-referrer="https://babaktv.com/",Rai 2 HD
+#EXTVLCOPT:http-referrer=https://babaktv.com/
+https://m3u.iranvids.com/rai02/output.m3u8
+#EXTINF:-1 tvg-id="Rai3.it",Rai 3 (720p)
+https://dash2.antik.sk/live/test_rai_tre_tizen/playlist.m3u8
 #EXTINF:-1 tvg-id="Rai3.it",Rai 3 (720p) [Not 24/7]
 https://wzstreaming.rai.it/TVlive/liveStream/chunklist_w823540263.m3u8
 #EXTINF:-1 tvg-id="Rai3.it",Rai 3 (720p) [Not 24/7]
@@ -334,14 +341,20 @@ https://raievent10-elem-live.akamaized.net/hls/live/619189/raievent10/raievent10
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=395276
 #EXTINF:-1 tvg-id="Rai5.it",Rai 5 (302p) [Geo-blocked]
 http://stream.tvtap.net:8081/live/it-rai5.stream/playlist.m3u8
+#EXTINF:-1 tvg-id="RaiGulp.it",Rai Gulp (1080p)
+http://188.60.179.180:8000/play/xxRaiGulpxx
 #EXTINF:-1 tvg-id="RaiGulp.it",Rai Gulp (576p)
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953
 #EXTINF:-1 tvg-id="RaiItaliaAsia.it",RAI Italia Asia (576p)
 http://210.210.155.37/x6bnqe/s/s63/index2.m3u8
+#EXTINF:-1 tvg-id="RaiMovie.it",Rai Movie (1080p)
+http://188.60.179.180:8000/play/xxRaiMOviexx
 #EXTINF:-1 tvg-id="RaiMovie.it",Rai Movie (576p) [Geo-blocked]
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747002
 #EXTINF:-1 tvg-id="RaiNews24.it",Rai News 24 (720p)
 https://rainews1-live.akamaized.net/hls/live/598326/rainews1/rainews1/playlist.m3u8
+#EXTINF:-1 tvg-id="RaiPremium.it",Rai Premium (1080p)
+http://188.60.179.180:8000/play/a0oy
 #EXTINF:-1 tvg-id="RaiPremium.it",Rai Premium (576p) [Geo-blocked]
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746992
 #EXTINF:-1 tvg-id="RaiScuola.it",Rai Scuola (576p) [Geo-blocked]
@@ -350,6 +363,8 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011
 http://originstream12.rai.it/italy/raisport2_1200/master.m3u8
 #EXTINF:-1 tvg-id="RaiStoria.it",Rai Storia (576p) [Geo-blocked]
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990
+#EXTINF:-1 tvg-id="RaiYoyo.it",Rai Yoyo (1080p)
+http://188.60.179.180:8000/play/xxRaiYoyo
 #EXTINF:-1 tvg-id="RaiYoyo.it",Rai YoYo (576p) [Geo-blocked]
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899
 #EXTINF:-1 tvg-id="RDSSocialTV.it",RDS Social TV (720p)
@@ -450,6 +465,8 @@ http://193.70.81.40:1935/supertvoristano/supertvoristano/playlist.m3u8
 https://vimnitaly.akamaized.net/hls/live/2094034/super/master-2500.m3u8
 #EXTINF:-1 tvg-id="SuperSix.it",SuperSix Lombardia (720p)
 https://5db313b643fd8.streamlock.net/SUPERSIXLombardia/SUPERSIXLombardia/playlist.m3u8
+#EXTINF:-1 tvg-id="SuperTennisHD.it",SuperTennis HD
+https://live-embed.supertennix.hiway.media/restreamer/supertennix_client/gpu-a-c0-16/restreamer/outgest/h24_supertennix/manifest.m3u8
 #EXTINF:-1 tvg-id="T9.it",T9 (288p)
 https://streaming.softwarecreation.it/tnove/tnove/playlist.m3u8
 #EXTINF:-1 tvg-id="TCFTV.it",TCF TV (720p)
@@ -462,6 +479,8 @@ https://m.iostream.it/hls/teatrotv/teatrotv.m3u8
 http://uk4.streamingpulse.com:1935/TeleabruzzoTV/TeleabruzzoTV/playlist.m3u8
 #EXTINF:-1 tvg-id="TeleLiguriaSud.it",Tele Liguria Sud (576p)
 https://5f22d76e220e1.streamlock.net/tls/tls/playlist.m3u8
+#EXTINF:-1 tvg-id="",Tele Messina (1080p)
+https://ssh101-fl.bozztv.com/ssh101/telemessina/index.m3u8
 #EXTINF:-1 tvg-id="Telepavia.it",Tele Pavia (720p)
 http://wms.shared.streamshow.it/telepavia/telepavia/playlist.m3u8
 #EXTINF:-1 tvg-id="TelePegasoCatania.it",Tele Pegaso Catania (404p) [Not 24/7]
@@ -648,3 +667,13 @@ https://stream.cp.ets-sistemi.it:1936/profservtv/profservtv/playlist.m3u8
 https://5f22d76e220e1.streamlock.net/canale5/canale5/playlist.m3u8
 #EXTINF:-1 tvg-id="ZerounoTVNews.it",Zerouno TV News (720p)
 https://5db313b643fd8.streamlock.net/ZerounoTVEventi/ZerounoTVEventi/playlist.m3u8
+#EXTINF:-1 tvg-id="Telenova.it",Telenova (720p)
+https://64b16f23efbee.streamlock.net/telenova/telenova/playlist.m3u8
+#EXTINF:-1 tvg-id="TeleQuattro.it",Tele Quattro (720p)
+https://59d7d6f47d7fc.streamlock.net/telequattro/telequattro/playlist.m3u8
+#EXTINF:-1 tvg-id="7RadioVisione.it",7 RadioVisione (720p)
+https://stream10.xdevel.com/video1s976543-1932/stream/playlist.m3u8
+#EXTINF:-1 tvg-id="RTV38.it",RTV38 (576p)
+https://streamcdne1-845d8509d2cb4f249dd0b2ae5755b6c2.msvdn.net/rtv38/rtv38_live_main/mainabr/rtv38_live_main/main_576/chunks_dvr.m3u8
+#EXTINF:-1 tvg-id="Super.it",Super!
+https://495c5a85d9074f29acffeaea9e0215eb.msvdn.net/super/super_main/super_main_hbbtv/playlist.m3u8

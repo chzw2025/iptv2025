@@ -187,8 +187,8 @@ https://unlimited1-cl.dps.live/itv/itv.smil/playlist.m3u8
 https://unlimited1-us.dps.live/itv/itv.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="JuntosTV.cl",Juntos TV (720p)
 https://video.juntostvchile.cl:8879/hls/web-jntv.m3u8
-#EXTINF:-1 tvg-id="Kanade.cl",Kanade (720p)
-https://stream.ichibantv.ga:3612/live/kanadetvlive.m3u8
+#EXTINF:-1 tvg-id="Kanade.cl",Kanade (1080p)
+https://streaming-cl.sh1ny.space/memfs/0e41fc31-9f44-46d4-8712-0446e2f3dcaa.m3u8
 #EXTINF:-1 tvg-id="LaChilenaTV.cl",La Chilena TV
 https://vdochile.com:3134/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="LaGranjaTV.cl",La Granja TV (720p) [Not 24/7]
@@ -311,8 +311,8 @@ https://5ff3d9babae13.streamlock.net/8000/8000/playlist.m3u8
 https://5ff3d9babae13.streamlock.net/8016/8016/playlist.m3u8
 #EXTINF:-1 tvg-id="SoloStandUp.cl",SoloStandUp (480p) [Not 24/7]
 https://paneltv.online:1936/8116/8116/playlist.m3u8
-#EXTINF:-1 tvg-id="SpectrumChannel.cl",Spectrum Channel SMAS (720p) [Not 24/7]
-https://panel.miplay.cl:8081/spectrumchannel/index.m3u8
+#EXTINF:-1 tvg-id="SpectrumChannel.cl",Spectrum Channel (720p)
+https://panel.miplay.cl:8082/spectrumchannel/index.m3u8
 #EXTINF:-1 tvg-id="StgoTV.cl",Stgo.TV (720p)
 https://stv.janus.cl/playlist/stream.m3u8
 #EXTINF:-1 tvg-id="Subela.cl",Súbela (720p)
@@ -443,5 +443,13 @@ https://mdstrm.com/live-stream-playlist/6046495ddf98b007fa2fe807.m3u8
 https://mediacpstreamchile.com:1936/8028/8028/playlist.m3u8
 #EXTINF:-1 tvg-id="ZappingMusic.cl",Zapping Music (720p)
 https://zmlive.zappingtv.com/zm-free/zm.smil/playlist.m3u8
+#EXTINF:-1 tvg-id="ZonaLatina.cl",Zona Latina (480p)
+http://190.2.212.209:8050/play/a0oj
 #EXTINF:-1 tvg-id="ZonaPlayTV.cl",Zona Play TV (720p)
 https://paneltv.online:1936/8100/8100/playlist.m3u8
+#EXTINF:-1 tvg-id="EnerGeekRadio.cl",EnerGeek Radio
+https://xui-backend.energeek.cl/live/11/playlist.m3u8?username=dEmoweBeneRGEek2025&password=FK8tJm5kBxetEDAXSLDF
+#EXTINF:-1 tvg-id="EnerGeekFAN.cl@SD",EnerGeek FAN (1080p)
+https://xui-backend.energeek.cl/live/10/playlist.m3u8?username=dEmoweBeneRGEek2025&password=FK8tJm5kBxetEDAXSLDF
+#EXTINF:-1 tvg-id="EnerGeek.cl",EnerGeek (1080p)
+https://xui-backend.energeek.cl/live/9/playlist.m3u8?username=dEmoweBeneRGEek2025&password=FK8tJm5kBxetEDAXSLDF

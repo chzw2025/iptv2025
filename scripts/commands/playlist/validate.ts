@@ -1,10 +1,9 @@
-import { Logger, Storage, Collection, Dictionary, File } from '@freearhey/core'
+import { Logger, Storage, Collection, Dictionary } from '@freearhey/core'
 import { PlaylistParser } from '../../core'
-import { Channel, Stream, Blocked } from '../../models'
+import { Channel, Stream, Blocked, Feed } from '../../models'
 import { program } from 'commander'
 import chalk from 'chalk'
-import { transliterate } from 'transliteration'
-import _ from 'lodash'
+import { uniqueId } from 'lodash'
 import { DATA_DIR, STREAMS_DIR } from '../../constants'
 
 program.argument('[filepath]', 'Path to file to validate').parse(process.argv)
@@ -18,48 +17,56 @@ type LogItem = {
 async function main() {
   const logger = new Logger()
 
-  logger.info(`loading blocklist...`)
+  logger.info('loading data from api...')
   const dataStorage = new Storage(DATA_DIR)
-  const channelsContent = await dataStorage.json('channels.json')
-  const channels = new Collection(channelsContent).map(data => new Channel(data))
+  const channelsData = await dataStorage.json('channels.json')
+  const channels = new Collection(channelsData).map(data => new Channel(data))
+  const channelsGroupedById = channels.keyBy((channel: Channel) => channel.id)
+  const feedsData = await dataStorage.json('feeds.json')
+  const feeds = new Collection(feedsData).map(data =>
+    new Feed(data).withChannel(channelsGroupedById)
+  )
+  const feedsGroupedByChannelId = feeds.groupBy((feed: Feed) =>
+    feed.channel ? feed.channel.id : uniqueId()
+  )
   const blocklistContent = await dataStorage.json('blocklist.json')
   const blocklist = new Collection(blocklistContent).map(data => new Blocked(data))
-
-  logger.info(`found ${blocklist.count()} records`)
+  const blocklistGroupedByChannelId = blocklist.keyBy((blocked: Blocked) => blocked.channelId)
 
   logger.info('loading streams...')
   const streamsStorage = new Storage(STREAMS_DIR)
-  const parser = new PlaylistParser({ storage: streamsStorage })
+  const parser = new PlaylistParser({
+    storage: streamsStorage,
+    channelsGroupedById,
+    feedsGroupedByChannelId
+  })
   const files = program.args.length ? program.args : await streamsStorage.list('**/*.m3u')
   const streams = await parser.parse(files)
-
   logger.info(`found ${streams.count()} streams`)
 
   let errors = new Collection()
   let warnings = new Collection()
-  let groupedStreams = streams.groupBy((stream: Stream) => stream.filepath)
-  for (const filepath of groupedStreams.keys()) {
-    const streams = groupedStreams.get(filepath)
+  let streamsGroupedByFilepath = streams.groupBy((stream: Stream) => stream.getFilepath())
+  for (const filepath of streamsGroupedByFilepath.keys()) {
+    const streams = streamsGroupedByFilepath.get(filepath)
     if (!streams) continue
-
-    const file = new File(filepath)
-    const [, countryCode] = file.basename().match(/([a-z]{2})(|_.*)\.m3u/i) || [null, '']
 
     const log = new Collection()
     const buffer = new Dictionary()
     streams.forEach((stream: Stream) => {
-      const channelNotInDatabase =
-        stream.channel && !channels.first((channel: Channel) => channel.id === stream.channel)
-      if (channelNotInDatabase) {
-        log.add({
-          type: 'warning',
-          line: stream.line,
-          message: `"${stream.channel}" is not in the database`
-        })
+      if (stream.channelId) {
+        const channel = channelsGroupedById.get(stream.channelId)
+        if (!channel) {
+          log.add({
+            type: 'warning',
+            line: stream.line,
+            message: `"${stream.id}" is not in the database`
+          })
+        }
       }
 
-      const alreadyOnPlaylist = stream.url && buffer.has(stream.url)
-      if (alreadyOnPlaylist) {
+      const duplicate = stream.url && buffer.has(stream.url)
+      if (duplicate) {
         log.add({
           type: 'warning',
           line: stream.line,
@@ -69,29 +76,22 @@ async function main() {
         buffer.set(stream.url, true)
       }
 
-      const channelId = generateChannelId(stream.name, countryCode)
-      const blocked = blocklist.first(
-        blocked =>
-          stream.channel.toLowerCase() === blocked.channel.toLowerCase() ||
-          channelId.toLowerCase() === blocked.channel.toLowerCase()
-      )
+      const blocked = stream.channel ? blocklistGroupedByChannelId.get(stream.channel.id) : false
       if (blocked) {
-        log.add({
-          type: 'error',
-          line: stream.line,
-          message: `"${stream.name}" is on the blocklist due to claims of copyright holders or NSFW content (${blocked.ref})`
-        })
+        if (blocked.reason === 'dmca') {
+          log.add({
+            type: 'error',
+            line: stream.line,
+            message: `"${blocked.channelId}" is on the blocklist due to claims of copyright holders (${blocked.ref})`
+          })
+        } else if (blocked.reason === 'nsfw') {
+          log.add({
+            type: 'error',
+            line: stream.line,
+            message: `"${blocked.channelId}" is on the blocklist due to NSFW content (${blocked.ref})`
+          })
+        }
       }
-
-      const channel_NSFW = stream.channel && channels.first((channel: Channel) => (channel.id === stream.channel) && (channel.isNSFW === true))
-      if(channel_NSFW) {
-        log.add({
-          type: 'error',
-          line: stream.line,
-          message: `Since January 30th, 2024, NSFW channels are no longer allowed in our playlists. Please see https://github.com/iptv-org/iptv/issues/15723 for further information.`
-        })
-      }
-
     })
 
     if (log.notEmpty()) {
@@ -124,17 +124,3 @@ async function main() {
 }
 
 main()
-
-function generateChannelId(name: string, code: string) {
-  if (!name || !code) return ''
-
-  name = name.replace(/ *\([^)]*\) */g, '')
-  name = name.replace(/ *\[[^)]*\] */g, '')
-  name = name.replace(/\+/gi, 'Plus')
-  name = name.replace(/[^a-z\d]+/gi, '')
-  name = name.trim()
-  name = transliterate(name)
-  code = code.toLowerCase()
-
-  return `${name}.${code}`
-}
