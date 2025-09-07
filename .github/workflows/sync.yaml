@@ -1,66 +1,48 @@
-name: Sync Fork with Upstream (Keep Workflows)
+name: Sync Fork
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天同步一次
+    - cron: '0 0 * * *' # 每天 0 点自动运行
   workflow_dispatch:
     inputs:
       upstream_repo:
         description: '上游仓库地址 (例如 https://github.com/luongz/iptv-jp.git)'
-        required: true
-        default: 'https://github.com/iptv-org/iptv.git'
+        required: false
+        default: 'https://github.com/luongz/iptv-jp.git'
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      # 1️⃣ 检出仓库
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          fetch-depth: 0
 
-      # 2️⃣ 先备份 workflow 文件
-      - name: Backup workflows
-        run: |
-          mkdir -p /tmp/myworkflows
-          cp -r .github/workflows/* /tmp/myworkflows/ || echo "No workflows to backup"
-
-      # 3️⃣ 配置 Git 用户
       - name: Set up Git
         run: |
           git config --global user.name "chzw2025"
           git config --global user.email "194056861+chzw2025@users.noreply.github.com"
 
-      # 4️⃣ 添加上游仓库并拉取
       - name: Add upstream
         run: |
-          git remote add upstream ${{ github.event.inputs.upstream_repo }}
-          git fetch upstream
+          # 如果手动触发传入参数，就用输入值，否则用默认值
+          UPSTREAM_REPO="${{ github.event.inputs.upstream_repo }}"
+          if [ -z "$UPSTREAM_REPO" ]; then
+            UPSTREAM_REPO="https://github.com/luongz/iptv-jp.git"
+          fi
+          echo "Using upstream repo: $UPSTREAM_REPO"
+          git remote add upstream "$UPSTREAM_REPO"
 
-      # 5️⃣ 获取默认分支
-      - name: Get default branch
-        id: vars
-        run: echo "DEFAULT_BRANCH=$(git remote show origin | grep 'HEAD branch' | cut -d':' -f2 | tr -d ' ')" >> $GITHUB_ENV
+      - name: Fetch upstream
+        run: git fetch upstream
 
-      # 6️⃣ Merge 上游内容
-      - name: Merge upstream
+      - name: Merge upstream changes
         run: |
-          git checkout $DEFAULT_BRANCH
-          git merge upstream/$DEFAULT_BRANCH --allow-unrelated-histories || echo "Merge finished"
+          git checkout main || git checkout master
+          git merge upstream/main --allow-unrelated-histories || true
 
-      # 7️⃣ 恢复自己备份的 workflow 文件
-      - name: Restore workflows
-        run: |
-          cp -r /tmp/myworkflows/* .github/workflows/ || echo "No workflows to restore"
-          git add .github/workflows
+          # 恢复 workflows 文件夹，防止被覆盖
+          git checkout HEAD -- .github/workflows || true
 
-      # 8️⃣ 提交并推送
       - name: Push changes
-        env:
-          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/${{ github.repository }}.git
-          git commit -m "Sync with upstream, keep own workflows" || echo "No changes to commit"
-          git push origin $DEFAULT_BRANCH --force
+          git push origin HEAD
