@@ -27,7 +27,7 @@ jobs:
           # 如果手动触发传入参数，就用输入值，否则用默认值
           UPSTREAM_REPO="${{ github.event.inputs.upstream_repo }}"
           if [ -z "$UPSTREAM_REPO" ]; then
-            UPSTREAM_REPO="https://github.com/luongz/iptv-jp.git"
+            UPSTREAM_REPO="https://github.com/iptv-org/iptv.git"
           fi
           echo "Using upstream repo: $UPSTREAM_REPO"
           git remote add upstream "$UPSTREAM_REPO"
