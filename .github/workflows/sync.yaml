@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       upstream_repo:
-        description: '上游仓库地址 (例如 https://github.com/luongz/iptv-jp.git)'
+        description: '上游仓库地址 (例如 https://github.com/iptv-org/iptv.git)'
         required: false
-        default: 'https://github.com/luongz/iptv-jp.git'
+        default: 'https://github.com/iptv-org/iptv.git'
 
 jobs:
   sync:
